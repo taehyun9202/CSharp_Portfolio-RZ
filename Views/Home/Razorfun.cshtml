@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorfun</title>
+</head>
+<body>
+    <h1>Here are some delicious Foods!</h1>
+    @{
+        <ul>
+            @foreach (var item in @ViewBag.FoodNames)
+            {
+                if(@item.StartsWith("C") || @item.StartsWith("c"))
+                {
+                    <p style="color:red;">@item</p>
+                }
+                else
+                {
+                    <p>@item</p>
+                }
+            }
+
+            <form action="/process" method="post">
+                <input type="text" name="name" />
+                <button>Add Food</button>
+            </form>
+        </ul>
+        
+    }
+</body>
+</html>

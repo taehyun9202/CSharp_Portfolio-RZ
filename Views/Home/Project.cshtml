@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div>
+        <a href ="/"><p style="display:inline-block;">Home</p></a>
+        <p style="display:inline-block;">Project</p>
+        <a href="/contact"><p style="display:inline-block;">Contact</p></a>
+    </div>
+    <fieldset style="overflow: auto; height: 400px">
+        <legend>My Project</legend>
+            @foreach (var item in @ViewBag.Projects)
+            {
+                <div class="pic">
+                    <input type="image" src="@item.Link" style="width: 30px;">
+                    <p>@item.Title</p>
+                    <p>@item.Text</p>
+                </div>
+                <div>
+                </div>
+            }
+    </fieldset>
+    @* <form action="/upload" method="post">
+        <input type="text" name="link"/>
+        <input type="text" name="title"/>
+        <input type="text" name="text"/>
+        <button>Add Project</button>
+    </form> *@
+</body>
+</html>

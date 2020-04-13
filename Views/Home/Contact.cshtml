@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div>
+        <a href ="/"><p style="display:inline-block;">Home</p></a>
+        <a href="/project"><p style="display:inline-block;">Project</p></a>
+        <p style="display:inline-block;">Contact</p>
+    </div>
+    <fieldset>
+        <legend>My Contact</legend>
+        <form action="/send" method="post">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>Email</label>
+        <input type="text" name="email">
+        <label>Message</label>
+        <input type="text" name="msg">
+        <button>Send</button>
+        </form>
+    </fieldset>
+</body>
+</html>
